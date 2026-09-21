@@ -41,8 +41,8 @@ Hi, my name is [Valerie Blankson]{.mark}.
 :::
 
 - [ ] Knit the document to check that the output looks okay.
-- [ ] Save, and push the output back up to GitHub. (Hint: see the instructions [here](https://soton-fds.github.io/github-tutorial.html))
-- [ ] Check that you can see the modified version in your personal GitHub repo.
+- [x] Save, and push the output back up to GitHub. (Hint: see the instructions [here](https://soton-fds.github.io/github-tutorial.html))
+- [x] Check that you can see the modified version in your personal GitHub repo.
 
 ## Palmer Penguins in `R`
 
@@ -66,9 +66,11 @@ When `quarto` compiles this document to HTML or PDF, the code is run, and the ou
 
 ```{r}
 library(tidyverse)
+#Reads the info from the dataset
 penguins <- read_csv("data/penguins.csv")
 head(penguins)
 summary(penguins)
+#Creates a plot with the dimensions of the penguin's attributes
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
   geom_point() +
   theme_minimal()
